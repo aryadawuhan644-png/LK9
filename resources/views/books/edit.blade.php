@@ -14,8 +14,11 @@
         
         <div>
             <label class="block text-gray-400 text-xs font-bold mb-2 uppercase tracking-wide">Judul Buku</label>
-            <input type="text" name="title" value="{{ old('title', $book->title) }}" class="w-full p-3 bg-[#1a1a1a] text-white border border-[#333] rounded-xl focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500 transition-all">
-            @error('title') <p class="text-red-400 text-xs mt-1">{{ $message }}</p> @enderror
+            <input type="text" name="title" value="{{ old('title', $book->title) }}" class="bg-[#1a1a1a] w-full p-3 rounded-lg text-white">
+    
+        @error('title')
+        <p class="text-red-500 text-xs mt-1 font-medium">{{ $message }}</p>
+        @enderror
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
